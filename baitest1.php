@@ -1,57 +1,57 @@
 <?php
-    function timgiatri($array){
-        for($i=0;$i<count($array);$i++){
-            for($j = $i; $j<count($array);$j++){
-                if($array[$i]<$array[$j]){
-                    $temp = 0;
-                    $temp = $array[$i];
-                    $array[$i] = $array[$j];
-                    $array[$j] = $temp;
+    function timgiatri($mang){
+        for($i=0;$i<count($mang);$i++){
+            for($j = $i; $j<count($mang);$j++){
+                if($mang[$i]<$mang[$j]){
+                    $tinhmang = 0;
+                    $tinhmang = $mang[$i];
+                    $mang[$i] = $mang[$j];
+                    $mang[$j] = $tinhmang;
                 }
             }
         }
-        return array_slice($array,0,5);
+        return array_slice($mang,0,5);
     }
 // test case 2
-    function timphantu($array){
+    function timphantu($mang){
         $tinh=[];
-        for($i=0;$i<count($array);$i++){
+        for($i=0;$i<count($mang);$i++){
             $tinh[$i] = 0;
-            for($j=$i;$j<count($array);$j++){
+            for($j=$i;$j<count($mang);$j++){
                 $tinh[$i]++;
             }
         }
         //show số lần nhiều nhất
-        for($i=0;$i<count($array);$i++){
-            if($tinh[$i] == 3){
+        for($i=0;$i<count($mang);$i++){
+            if($tinh[$i] == 1){
                 $layramang = '';
-                $layramang = $array[$i];
+                $layramang = $mang[$i];
 
-                if($array[$i] === null){
-                    $array[$i] = 'null';
+                if($mang[$i] === null){
+                    $mang[$i] = 'null';
                 }
-                if($array[$i] === true){
-                    $array[$i] = 'true';
+                if($mang[$i] === true){
+                    $mang[$i] = 'true';
                 }
-                if($array[$i] == "hello"){
-                    $array[$i] = 'hello';
+                if($mang[$i] == "hello"){
+                    $mang[$i] = 'hello';
                 }
-                if($array[$i] == "up"){
-                    $array[$i] = 'up';
+                if($mang[$i] == "up"){
+                    $mang[$i] = 'up';
                 }
-                if($array[$i] == "down"){
-                    $array[$i] = 'down';
+                if($mang[$i] == "down"){
+                    $mang[$i] = 'down';
                 }
-                if($array[$i] == "left"){
-                    $array[$i] = 'left';
+                if($mang[$i] == "left"){
+                    $mang[$i] = 'left';
                 }
-                if($array[$i] == "right"){
-                    $array[$i] = 'right';
+                if($mang[$i] == "right"){
+                    $mang[$i] = 'right';
                 }
-                if($array[$i] === false){
-                    $array[$i] = 'false';
+                if($mang[$i] === false){
+                    $mang[$i] = 'false';
                 }
-                return $array[$i];
+                return $mang[$i];
             }
         }
     }

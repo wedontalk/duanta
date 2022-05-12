@@ -52,13 +52,13 @@
             ?>
         </p>
         <p>
-            timphantu ([null, "hello", true, null]) =>
+            findFrequent ([null, "hello", true, null]) =>
             <?php
                 echo timphantu([null, "hello", true, null]);
             ?>
         </p>
         <p> 
-            timphantu ([false, "up", "down", "left", "right", true, false]) =>
+            findFrequent ([false, "up", "down", "left", "right", true, false]) =>
             <?php
                 echo timphantu([false, "up", "down", "left", "right", true, false]);
             ?>
